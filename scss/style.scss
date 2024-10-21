@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.add-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.cards {
+    display: flex;
+}
+
+.card {
+    margin: 0 20px 0 0;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #222222;
+    color: #fff;
+    min-width: 200px;
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+    }
+
+    &__elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__element {
+        margin: 0 0 10px 0;
+        padding: 5px;
+        background-color: #fff;
+        border-radius: 5px;
+        color: #000;
+        cursor: pointer;
+    }
+
+    &__element._active {
+        background-color: #b9b9b9;
+    }
+
+    &__button-start,
+    &__button-done {
+        text-align: center;
+        background-color: #fff;
+        color: #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    &__button-start._active {
+        display: none;
+    }
+
+    &__button-done {
+        display: none;
+    }
+
+    &__button-done._active {
+        display: block;
+    }
+
+    &__button-done._lock {
+        background-color: #808080;
+        color: #202020;
+        pointer-events: none;
+    }
+}
